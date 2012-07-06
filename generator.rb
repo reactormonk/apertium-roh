@@ -77,5 +77,5 @@ DATA
 
   [vbchange, vblex].each do |vb| document.at_css("#main").add_child vb end
 
-  puts document.to_xml
+  File.open('generated.dix') {|file| file.puts document.to_xml }
 end
