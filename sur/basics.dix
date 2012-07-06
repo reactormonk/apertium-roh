@@ -220,43 +220,43 @@
       <e><par n="v_pp_a"/></e>
       <e><p><l>a</l><r/></p><par n="v_cni"/></e>
       <e><p><l>a</l><r/></p><par n="v_pii"/></e>
-      <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
     <pardef n="a1__vblex">
       <e><par n="a1_irreg__vblex"/></e>
       <e><par n="v1_pri_ae"/></e>
+      <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
     <pardef n="e1_irreg__vblex">
       <e><par n="v1_prs_ae"/></e>
       <e><par n="1_ei"/></e>
-      <e><p><l>er</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
     <pardef n="e1__vblex">
       <e><par n="e1_irreg__vblex"/></e>
       <e><par n="v1_pri_ae"/></e>
+      <e><p><l>er</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
     <pardef n="ai1_irreg__vblex">
       <e><par n="v1_prs_ae"/></e>
       <e><par n="1_ei"/></e>
-      <e><p><l>air</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
     <pardef n="ai1__vblex">
       <e><par n="ai1_irreg__vblex"/></e>
       <e><par n="v1_pri_ae"/></e>
+      <e><p><l>air</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
     <pardef n="i1_irreg__vblex">
       <e><par n="v1_prs_ae"/></e>
       <e><par n="1_ei"/></e>
-      <e><p><l>ir</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
     <pardef n="i1__vblex">
       <e><par n="v1_prs_i"/></e>
       <e><par n="i1_irreg__vblex"/></e>
       <e><par n="v1_pri_i"/></e>
+      <e><p><l>ir</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
     <!-- joined together for easier use -->
