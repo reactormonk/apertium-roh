@@ -11,9 +11,10 @@
     <sdef n="cund"/>
     <sdef n="pri"/>
     <sdef n="past"/>
+    <sdef n="inf"/>
   </sdefs>
   <pardefs>
-    <pardef n="v_pri_ae">               <!-- Think of one RIndPrs1 -->
+    <pardef n="v_pri">
       <e><p>
         <l/>
         <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="sg"/></r>
@@ -26,6 +27,13 @@
         <l>a</l>
         <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="sg"/></r>
       </p></e>
+      <e><p>
+        <l>an</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <pardef n="v_pri_ae">
       <e><p>
         <l>ain</l>
         <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r>
@@ -34,25 +42,9 @@
         <l>ais</l>
         <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
       </p></e>
-      <e><p>
-        <l>an</l>
-        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="pl"/></r>
-      </p></e>
     </pardef>
 
-    <pardef n="v_pri_i">               <!-- Think of one RIndPrs2 -->
-      <e><p>
-        <l/>
-        <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="sg"/></r>
-      </p></e>
-      <e><p>
-        <l>as</l>
-        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="sg"/></r>
-      </p></e>
-      <e><p>
-        <l>a</l>
-        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="sg"/></r>
-      </p></e>
+    <pardef n="v_pri_i">
       <e><p>
         <l>in</l>
         <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r>
@@ -61,13 +53,9 @@
         <l>is</l>
         <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
       </p></e>
-      <e><p>
-        <l>an</l>
-        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="pl"/></r>
-      </p></e>
     </pardef>
 
-    <pardef n="v_conj_aei">               <!-- Think of one RConjPrs -->
+    <pardef n="v_conj">
       <e><p>
         <l>ia</l>
         <r><s n="vblex"/><s n="conj"/><s n="p1"/><s n="sg"/></r>
@@ -95,7 +83,7 @@
     </pardef>
 
     <!-- + a/e/i depending on class -->
-    <pardef n="v_cund_aei">               <!-- Think of one RCundPrs -->
+    <pardef n="v_cund">
       <e><p>
         <l>ss</l>
         <r><s n="vblex"/><s n="cund"/><s n="p1"/><s n="sg"/></r>
@@ -123,7 +111,7 @@
     </pardef>
 
     <!-- + a/e/i depending on class -->
-    <pardef n="v_past_aei">               <!-- Think of one RIndIpf -->
+    <pardef n="v_past">
       <e><p>
         <l>va</l>
         <r><s n="vblex"/><s n="past"/><s n="p1"/><s n="sg"/></r>
@@ -150,28 +138,61 @@
       </p></e>
     </pardef>
 
-    <pardef n="a__vblex">
-      <e><par n="v_pri_ae"/></e>
-      <e><par n="v_conj_aei"/></e>
-      <e><p><l>a</l><r/></p><par n="v_cund_aei"/></e>
-      <e><p><l>a</l><r/></p><par n="v_past_aei"/></e>
+    <!-- vocal changes in this category -->
+    <pardef n="0__vblex">
+      <e><par n="v_pri"/></e>
+      <e><par n="v_conj"/></e>
     </pardef>
 
-    <pardef n="e__vblex">
+    <!-- but not in this one -->
+    <pardef n="a1__vblex">
       <e><par n="v_pri_ae"/></e>
-      <e><par n="v_conj_aei"/></e>
-      <e><p><l>e</l><r/></p><par n="v_cund_aei"/></e>
-      <e><p><l>e</l><r/></p><par n="v_past_aei"/></e>
+      <e><p><l>a</l><r/></p><par n="v_cund"/></e>
+      <e><p><l>a</l><r/></p><par n="v_past"/></e>
+      <e><p><l>ar</l><r><s n="inf"/></r></p></e>
     </pardef>
 
-    <pardef n="i__vblex">
+    <pardef n="e1__vblex">
+      <e><par n="v_pri_ae"/></e>
+      <e><p><l>e</l><r/></p><par n="v_cund"/></e>
+      <e><p><l>e</l><r/></p><par n="v_past"/></e>
+      <e><p><l>er</l><r><s n="inf"/></r></p></e>
+    </pardef>
+
+    <pardef n="ai1__vblex">
+      <e><par n="v_pri_ae"/></e>
+      <e><p><l>e</l><r/></p><par n="v_cund"/></e>
+      <e><p><l>e</l><r/></p><par n="v_past"/></e>
+      <e><p><l>air</l><r><s n="inf"/></r></p></e>
+    </pardef>
+
+    <pardef n="i1__vblex">
       <e><par n="v_pri_i"/></e>
-      <e><par n="v_conj_aei"/></e>
-      <e><p><l>i</l><r/></p><par n="v_cund_aei"/></e>
-      <e><p><l>i</l><r/></p><par n="v_past_aei"/></e>
+      <e><p><l>i</l><r/></p><par n="v_cund"/></e>
+      <e><p><l>i</l><r/></p><par n="v_past"/></e>
+      <e><p><l>ir</l><r><s n="inf"/></r></p></e>
+    </pardef>
+
+    <!-- joined together for easier use -->
+    <pardef n="a__vblex">
+      <e><par n="0__vblex"/></e>
+      <e><par n="a1__vblex"/></e>
+    </pardef>
+    <pardef n="i__vblex">
+      <e><par n="0__vblex"/></e>
+      <e><par n="i1__vblex"/></e>
+    </pardef>
+    <pardef n="ai__vblex">
+      <e><par n="0__vblex"/></e>
+      <e><par n="ai1__vblex"/></e>
+    </pardef>
+    <pardef n="e__vblex">
+      <e><par n="0__vblex"/></e>
+      <e><par n="e1__vblex"/></e>
     </pardef>
 
   </pardefs>
   <section id="main" type="standard">
+    <!-- <e lm="campar"><i>camp</i><par n="a__vblex"/></e> -->
   </section>
 </dictionary>
