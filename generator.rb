@@ -30,7 +30,8 @@ class VCVerb < Verb
 
   alias vb_root root
   def change
-    m = vb_root.match /(.*)(#{Regexp.union(@from, @to)})([^aieou]*)$/
+    greedy = ![@from, @to].any?(&:empty?)
+    m = vb_root.match /(.*#{greedy ? "?" : ""})(#{Regexp.union(@from, @to)})([^aieou]*)$/
     m[1] + @invert[m[2]] + m[3]
   end
 

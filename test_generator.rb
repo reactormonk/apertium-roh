@@ -33,7 +33,8 @@ describe VCVerb do
    ["taisser", "e", "ai", "tess", "taiss"],
    ["luar", "u", "ieu", "lu", "lieu"],
    ["gratular", "", "esch", "gratul", "gratulesch"],
-   ["finir", "", "esch", "fin", "finesch"]
+   ["finir", "", "esch", "fin", "finesch"],
+   ["sclauder", "u", "au", "sclud", "sclaud"]
   ].each do |(verb, from, to, root, changed)|
     describe "describe the verb #{verb}" do
       let(:target) { VCVerb.new(verb, from, to) }
