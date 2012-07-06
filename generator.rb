@@ -67,7 +67,9 @@ VBLEX = ERB.new <<-DATA
 </e>
 DATA
 
+
 def generate
+  irregular = Nokogiri::XML(File.read('irregular.dix'))
   document = Nokogiri::XML(File.read('basics.dix'))
 
    vbchange = Dir['vblex/*-*'].flat_map do |file|
@@ -86,9 +88,14 @@ def generate
     end
   end.join("\n")
 
-  [vbchange, vblex].each do |vb| document.at_css("#main").add_child vb end
+  vbirreg = irregular.css("#main").children
+  pars = irregular.css("pardef")
 
-  File.open('generated.dix', 'w') {|file| file.puts document.to_xml }
+  [vbirreg, vbchange, vblex].each do |vb| document.at_css("#main").add_child vb end
+
+  document.at_css("pardefs").add_child pars
+
+  File.open('generated.dix', 'w') {|file| file.puts document.to_xml(encoding: 'utf-8') }
 end
 
 if $0 == __FILE__
