@@ -1,9 +1,10 @@
 require 'nokogiri'
 require 'erb'
+require 'pry'
 
 class Verb
   def initialize(verb)
-    @verb = verb
+    @verb = verb.strip
   end
   attr :verb
 
@@ -54,26 +55,27 @@ if $0 == __FILE__
   document = Nokogiri::XML(File.read('basics.metadix'))
 
   VCHANGE = ERB.new <<-DATA
-<e lm="<%=root%>"><i><%=changed%></i><par n="0__vblex"/></e>
-<e lm="<%=root%>"><i><%=root%></i><par n="<%=type%>1__vblex"/></e>
+<e lm="<%=verb.root%>"><i><%=verb.changed%></i><par n="0__vblex"/></e>
+<e lm="<%=verb.root%>"><i><%=verb.root%></i><par n="<%=verb.type%>1__vblex"/></e>
 DATA
 
-  Dir['vblex/*-*'].each do |file|
-    from, to = file.split('-')
-    File.read(file).each_line do |verb|
+   vbchange = Dir['vblex/*-*'].flat_map do |file|
+    from, to = File.basename(file).split('-')
+    File.read(file).each_line.map do |verb|
       verb = VCVerb.new(verb, from, to)
-      document.at_css("#main").add_child VCHANGE.result(verb)
+      VCHANGE.result(binding)
     end
-  end
+  end.join("\n")
 
-  Dir['vblex/simple'].flat_map do |file|
+  vblex = Dir['vblex/simple'].flat_map do |file|
     type = File.basename file
-    File.read(file).each_line do |verb|
+    File.read(file).each_line.map do |verb|
       verb = Verb.new verb
       "<e lm='%s'><i>%s</i><par n='%s__vblex'/></e>" % [verb.verb, verb.root, verb.type]
-      document.at_css("#main").add_child vblex
     end
-  end
+  end.join("\n")
+
+  [vbchange, vblex].each do |vb| document.at_css("#main").add_child vb end
 
   puts document.to_xml
 end

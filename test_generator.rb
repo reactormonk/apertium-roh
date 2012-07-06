@@ -30,7 +30,8 @@ describe VCVerb do
    ["manar", "a", "ai", "man", "main"],
    ["baiver", "a", "ai", "bav", "baiv"],
    ["suandar", "ua", "uo", "suand", "suond"],
-   ["taisser", "e", "ai", "tess", "taiss"]
+   ["taisser", "e", "ai", "tess", "taiss"],
+   ["luar", "u", "ieu", "lu", "lieu"]
   ].each do |(verb, from, to, root, changed)|
     describe "describe the verb #{verb}" do
       let(:target) { VCVerb.new(verb, from, to) }
