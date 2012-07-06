@@ -247,17 +247,12 @@
       <e><par n="v_prs_ae"/></e>
     </pardef>
 
-    <pardef n="v_prs_i">
-      <e><par n="v_prs_i"/></e>
-    </pardef>
-
     <pardef n="v_prs_ai">
       <e><par n="v_prs_e"/></e>
     </pardef>
 
     <!-- no vocal changes here, this is the first root -->
     <pardef n="1_ae">
-      <e><par n="v_ger_a"/></e>
       <e><par n="v_pp_a"/></e>
       <e><p><l>a</l><r/></p><par n="v_cni"/></e>
       <e><p><l>a</l><r/></p><par n="v_pii"/></e>
@@ -265,6 +260,7 @@
 
     <!-- The _irreg_ categories are for irregular verbs -->
     <pardef n="a1_irreg__vblex">
+      <e><par n="v_ger_a"/></e>
       <e><par n="1_ae"/></e>
       <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
@@ -274,6 +270,7 @@
     </pardef>
 
     <pardef n="e1_irreg__vblex">
+      <e><par n="v_ger_ei"/></e>
       <e><par n="1_ae"/></e>
       <e><p><l>er</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
@@ -283,6 +280,7 @@
     </pardef>
 
     <pardef n="ai1_irreg__vblex">
+      <e><par n="v_ger_ei"/></e>
       <e><par n="1_ae"/></e>
       <e><p><l>air</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
@@ -292,7 +290,7 @@
     </pardef>
 
     <pardef n="i1_irreg__vblex">
-      <e><par n="v_ger_i"/></e>
+      <e><par n="v_ger_ei"/></e>
       <e><par n="v_pp_ei"/></e>
       <e><p><l>i</l><r/></p><par n="v_cni"/></e>
       <e><p><l>i</l><r/></p><par n="v_pii"/></e>
