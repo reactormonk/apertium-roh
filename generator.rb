@@ -1,6 +1,5 @@
 require 'nokogiri'
 require 'erb'
-require 'pry'
 
 class Verb
   def initialize(verb)
@@ -30,9 +29,12 @@ class VCVerb < Verb
 
   alias vb_root root
   def change
-    greedy = ![@from, @to].any?(&:empty?)
-    m = vb_root.match /(.*#{greedy ? "?" : ""})(#{Regexp.union(@from, @to)})([^aieou]*)$/
-    m[1] + @invert[m[2]] + m[3]
+    if [@from, @to].any?(&:empty?) # insert only
+      vb_root + [@from, @to].max_by {|e| e.size} # see which one is the insert one
+    else
+      m = vb_root.match /(.*?)(#{Regexp.union(@from, @to)})([^aieou]*)$/
+      m[1] + @invert[m[2]] + m[3]
+    end
   end
 
   def inverted?
