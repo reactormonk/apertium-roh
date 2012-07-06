@@ -19,6 +19,7 @@
     <sdef n="f"/>
   </sdefs>
   <pardefs>
+    <!-- TODO rename those with changes to v0, the others to v1 -->
     <pardef n="v_pri">
       <e><p>
         <l/>

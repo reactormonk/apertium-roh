@@ -12,3 +12,13 @@ savevel ; ^savevel/saver<vblex><pii><p1><sg>$
 vendevel ; ^vendevel/vender<vblex><pii><p1><sg>$
 dormel ; ^dormel/durmir<vblex><pri><p1><sg>$
 durmevel ; ^durmevel/durmir<vblex><pii><p1><sg>$
+hagies ; ^hagies/haver<vblex><prs><p2><sg>$
+ditgi ; ^ditgi/dir<vblex><prs><p1><sg>$
+ditgies ; ^ditgies/dir<vblex><prs><p2><sg>$
+fetschi ; ^fetschi/far<vblex><prs><p1><sg>$
+fetschies ; ^fetschies/far<vblex><prs><p2><sg>$
+meien ; ^meien/ir<vblex><prs><p1><pl>$
+meies ; ^meies/ir<vblex><prs><p2><pl>$
+meini ; ^meini/menar<vblex><prs><p1><sg>/menar<vblex><prs><p3><sg>$
+meneien ; ^meneien/menar<vblex><prs><p1><pl>$
+meinies ; ^meinies/menar<vblex><prs><p2><sg>$
