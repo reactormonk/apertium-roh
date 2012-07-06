@@ -74,7 +74,7 @@ def generate
   irregular = Nokogiri::XML(File.read('irregular.dix'))
   document = Nokogiri::XML(File.read('basics.dix'))
 
-   vbchange = Dir['vblex/*-*'].flat_map do |file|
+  vbchange = Dir['vblex/*-*'].flat_map do |file|
     from, to = File.basename(file).split('-')
     File.read(file).each_line.map do |verb|
       verb = VCVerb.new(verb, from, to)
@@ -83,9 +83,9 @@ def generate
   end.join("\n")
 
   vblex = File.read('vblex/simple').each_line.map do |verb|
-      verb = Verb.new verb
-      VBLEX.result(binding)
-    end.join("\n")
+    verb = Verb.new verb
+    VBLEX.result(binding)
+  end.join("\n")
 
   vbirreg = irregular.css("#main").children
   pars = irregular.css("pardef")
