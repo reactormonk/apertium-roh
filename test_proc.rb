@@ -21,9 +21,9 @@ require 'shellwords'
 
 class LTProc
   # this generates file.lr and file.rl in the directory
-  def initialize(dix, direction)
+  def initialize(dix, direction, parameters)
     system ['lt-comp', direction, dix, dix + "." + direction].shelljoin
-    @proc = IO.popen(['lt-proc', '-z', dix + "." + direction], 'r+')
+    @proc = IO.popen(['lt-proc', '-z', parameters, dix + "." + direction].compact, 'r+')
     @proc.sync = true
   end
 
@@ -34,10 +34,10 @@ class LTProc
   end
 end
 
-[['analyze', 'lr'], ['generate', 'rl']].each do |(type, direction)|
+[['analyze', 'lr', nil], ['generate', 'rl', '-g']].each do |(type, direction, parameters)|
   describe "#{type}r" do
     if File.exists? type
-      proc = LTProc.new(DIX, direction)
+      proc = LTProc.new(DIX, direction, parameters)
       # expectes either 'analyze' or 'generate'
       File.read(type).each_line do |line|
         input, output = *line.strip.split(";").map(&:strip)
