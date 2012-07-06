@@ -68,6 +68,11 @@ VCHANGE = ERB.new <<-DATA
 <e lm="<%=verb.verb%>"><p><l><%=verb.changed%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>0__vblex"/></e>
 <e lm="<%=verb.verb%>"><p><l><%=verb.root%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>1__vblex"/></e>
 DATA
+# `-sch-` type words inflect differently in sur/prs
+VSCH = ERB.new <<-DATA
+<e lm="<%=verb.verb%>"><p><l><%=verb.changed%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>-sch0__vblex"/></e>
+<e lm="<%=verb.verb%>"><p><l><%=verb.root%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>-sch1__vblex"/></e>
+DATA
 VBLEX = ERB.new <<-DATA
 <e lm='<%=verb.verb%>'>
   <p>
@@ -117,6 +122,19 @@ def generate
       end.join("\n")
     end
   end
+
+  proc do
+    # This is only for Sursilvan, based on the existence of `vblex/sch`
+    file = 'vblex/sch'
+    if File.exist?(file)
+      verbs << File.read(file).each_line.map do |line|
+        verb = VCVerb.new(line.strip, "", "")
+        infix = {'e' => 'e', 'a' => 'e', 'ai' => 'e', 'i' => 'i'}[verb.type]
+        verb.instance_variable_set(:@to, infix + "sch")
+        VSCH.result(binding)
+      end.join("\n")
+    end
+  end.call
 
   # require 'pry'
   # binding.pry

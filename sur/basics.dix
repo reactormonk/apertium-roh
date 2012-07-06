@@ -60,7 +60,9 @@
       </p></e>
     </pardef>
 
-    <pardef n="v_prs_ae">
+    <!-- special categories for -sch- verbs, as usual 0 with changes -
+    TODO: change this? -->
+    <pardef n="v0_prs_ae">
       <e><p>
         <l>i</l>
         <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="sg"/></r>
@@ -73,6 +75,13 @@
         <l>i</l>
         <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="sg"/></r>
       </p></e>
+      <e><p>
+        <l>ien</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <pardef n="v1_prs_ae">
       <e><p>
         <l>eien</l>
         <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="pl"/></r>
@@ -81,24 +90,17 @@
         <l>eies</l>
         <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="pl"/></r>
       </p></e>
-      <e><p>
-        <l>ien</l>
-        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
-      </p></e>
     </pardef>
 
-    <pardef n="v_prs_i">
+    <pardef n="v_prs_ae">
+      <e><par n="v0_prs_ae"/></e>
+      <e><par n="v1_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="v0_prs_i">
       <e><p>
         <l>i</l>
         <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="sg"/></r>
-      </p></e>
-      <e><p>
-        <l>ies</l>
-        <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="sg"/></r>
-      </p></e>
-      <e><p>
-        <l>i</l>
-        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="sg"/></r>
       </p></e>
       <e><p>
         <l>îen</l>
@@ -112,6 +114,22 @@
         <l>ien</l>
         <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
       </p></e>
+    </pardef>
+
+    <pardef n="v1_prs_i">
+      <e><p>
+        <l>ies</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>i</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="sg"/></r>
+      </p></e>
+    </pardef>
+
+    <pardef n="v_prs_i">
+      <e><par n="v0_prs_i"/></e>
+      <e><par n="v1_prs_i"/></e>
     </pardef>
 
     <!-- + a/e depending on class -->
@@ -196,22 +214,28 @@
     <!-- vocal changes in this category (second root) -->
     <pardef n="a0__vblex">
       <e><par n="v_pri"/></e>
-      <e><par n="v_prs_ae"/></e>
+      <e><par n="v0_prs_ae"/></e>
+      <!-- this is included here, as this special case only happens
+           with `esch` words -->
+      <e><par n="v1_prs_ae"/></e>
     </pardef>
 
     <pardef n="e0__vblex">
       <e><par n="v_pri"/></e>
-      <e><par n="v_prs_ae"/></e>
+      <e><par n="v0_prs_ae"/></e>
+      <e><par n="v1_prs_ae"/></e>
     </pardef>
 
     <pardef n="i0__vblex">
       <e><par n="v_pri"/></e>
-      <e><par n="v_prs_i"/></e>
+      <e><par n="v0_prs_i"/></e>
+      <e><par n="v1_prs_i"/></e>
     </pardef>
 
     <pardef n="ai0__vblex">
       <e><par n="v_pri"/></e>
-      <e><par n="v_prs_i"/></e>
+      <e><par n="v0_prs_i"/></e>
+      <e><par n="v1_prs_i"/></e>
     </pardef>
 
     <!-- these pardefs are for generation -->
@@ -232,25 +256,25 @@
     </pardef>
 
     <!-- no vocal changes here, this is the first root -->
-    <!-- The _irreg_ categories are for irregular verbs -->
-    <pardef n="a1_irreg__vblex">
+    <pardef n="1_ae">
       <e><par n="v_ger_a"/></e>
       <e><par n="v_pp_a"/></e>
       <e><p><l>a</l><r/></p><par n="v_cni"/></e>
       <e><p><l>a</l><r/></p><par n="v_pii"/></e>
-      <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
 
+    <!-- The _irreg_ categories are for irregular verbs -->
+    <pardef n="a1_irreg__vblex">
+      <e><par n="1_ae"/></e>
+      <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
+    </pardef>
     <pardef n="a1__vblex">
       <e><par n="a1_irreg__vblex"/></e>
       <e><par n="v_pri_ae"/></e>
     </pardef>
 
     <pardef n="e1_irreg__vblex">
-      <e><par n="v_ger_e"/></e>
-      <e><par n="v_pp_ei"/></e>
-      <e><p><l>e</l><r/></p><par n="v_cni"/></e>
-      <e><p><l>e</l><r/></p><par n="v_pii"/></e>
+      <e><par n="1_ae"/></e>
       <e><p><l>er</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
     <pardef n="e1__vblex">
@@ -259,10 +283,7 @@
     </pardef>
 
     <pardef n="ai1_irreg__vblex">
-      <e><par n="v_ger_e"/></e>
-      <e><par n="v_pp_ei"/></e>
-      <e><p><l>e</l><r/></p><par n="v_cni"/></e>
-      <e><p><l>e</l><r/></p><par n="v_pii"/></e>
+      <e><par n="1_ae"/></e>
       <e><p><l>air</l><r><s n="vblex"/><s n="inf"/></r></p></e>
     </pardef>
     <pardef n="ai1__vblex">
@@ -285,22 +306,63 @@
 
     <!-- joined together for easier use -->
     <pardef n="a__vblex">
-      <e><par n="0__vblex"/></e>
+      <e><par n="a0__vblex"/></e>
       <e><par n="a1__vblex"/></e>
     </pardef>
     <pardef n="i__vblex">
-      <e><par n="0__vblex"/></e>
+      <e><par n="i0__vblex"/></e>
       <e><par n="i1__vblex"/></e>
     </pardef>
     <pardef n="ai__vblex">
-      <e><par n="0__vblex"/></e>
+      <e><par n="ai0__vblex"/></e>
       <e><par n="ai1__vblex"/></e>
     </pardef>
     <pardef n="e__vblex">
-      <e><par n="0__vblex"/></e>
+      <e><par n="e0__vblex"/></e>
       <e><par n="e1__vblex"/></e>
     </pardef>
 
+    <!-- in Sursilvan, `-sch-` verbs inflect as in pri, which adds
+         some forms to the uninfixed root -->
+    <pardef n="a-sch1__vblex">
+      <e><par n="a1__vblex"/></e>
+      <e><par n="v1_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="a-sch0__vblex">
+      <e><par n="v_pri"/></e>
+      <e><par n="v0_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="e-sch1__vblex">
+      <e><par n="e1__vblex"/></e>
+      <e><par n="v1_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="e-sch0__vblex">
+      <e><par n="v_pri"/></e>
+      <e><par n="v0_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="ai-sch1__vblex">
+      <e><par n="ai1__vblex"/></e>
+      <e><par n="v1_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="ai-sch0__vblex">
+      <e><par n="v_pri"/></e>
+      <e><par n="v0_prs_ae"/></e>
+    </pardef>
+
+    <pardef n="i-sch1__vblex">
+      <e><par n="i1__vblex"/></e>
+      <e><par n="v1_prs_i"/></e>
+    </pardef>
+
+    <pardef n="i-sch0__vblex">
+      <e><par n="v_pri"/></e>
+      <e><par n="v0_prs_i"/></e>
+    </pardef>
   </pardefs>
   <section id="main" type="standard">
   </section>
