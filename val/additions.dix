@@ -1,0 +1,32 @@
+<e><p><l>craj</l><r>crajer</r></p><par n="v0_prs"></e>
+<e><p><l>dett</l><r>dar</r></p><par n="v0_prs"></e>
+<e><p><l>di</l><r>dir</r></p><par n="v0_prs"></e>
+<e><p><l>dess</l><r>dovair</r></p><par n="v0_prs"></e>
+<e><p><l>fetsch</l><r>far</r></p><par n="v0_prs"></e>
+<e><p><l>giaj</l><r>ir</r></p><par n="v0_prs"></e>
+<e><p><l>lasch</l><r>laschar</r></p><par n="v0_prs"></e>
+<e><p><l>poss</l><r>pudair</r></p><par n="v0_prs"></e>
+<e><p><l>sapch</l><r>saver</r></p><par n="v0_prs"></e>
+<e><p><l>stett</l><r>star</r></p><par n="v0_prs"></e>
+<e><p><l>stögli</l><r>stovair</r></p><par n="v0_prs"></e>
+<e><p><l>stopch</l><r>stovair</r></p><par n="v0_prs"></e>
+<e><p><l>tir</l><r>trar</r></p><par n="v0_prs"></e>
+<e><p><l>vegn</l><r>gnir</r></p><par n="v0_prs"></e>
+<e><p><l>gni</l><r>gnir</r></p><par n="v0_prs"></e>
+<e><p><l>vögli</l><r>vulair</r></p><par n="v0_prs"></e>
+
+<e><p><l>fü</l><r>esser</r></p><par n="v_cni"></e>
+<e><p><l>g</l><r>ir</r></p><par n="v_cni"></e>
+<e><p><l>g</l><r>gi</r></p><par n="a1_irreg__vblex"></e> <!-- TODO solve overgeneration -->
+
+<e><p><l>v</l><r>haver</r></p><par n="a1_irreg__vblex"></e>
+<e><p><l>d</l><r>dar</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>dsch</l><r>dir</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>dess</l><r>dovair</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>f</l><r>far</r></p><par n="a1_irreg__vblex"></e>
+<e><p><l>pud</l><r>pudair</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>sav</l><r>savair</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>st</l><r>star</r></p><par n="a1_irreg__vblex"></e>
+<e><p><l>stuv</l><r>stuvair</r></p><par n="e1_irreg__vblex"></e>
+<e><p><l>gn</l><r>gnir</r></p><par n="i1_irreg__vblex"></e>
+<e><p><l>l</l><r>vuleir</r></p><par n="e1_irreg__vblex"></e>

@@ -1,5 +1,5 @@
 <dictionary>
-  <alphabet>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzî</alphabet>
+  <alphabet>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzîöüä</alphabet>
   <sdefs>
     <sdef n="vblex"/>
     <sdef n="sg"/>
@@ -85,15 +85,15 @@
       </p></e>
       <e><p>
         <l>an</l>
-        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
-      </p></e>
-      <e><p>
-        <l>at</l>
         <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="pl"/></r>
       </p></e>
       <e><p>
-        <l>an</l>
+        <l>at</l>
         <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>an</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
       </p></e>
     </pardef>
 
@@ -206,7 +206,6 @@
 
     <!-- no vocal changes here, this is the first root -->
     <pardef n="1_ae">
-      <e><par n="v1_prs"/></e>
       <e><par n="v_ger_ae"/></e>
       <e><p><l>e</l><r/></p><par n="v_cni"/></e>
       <e><p><l>a</l><r/></p><par n="v_pii"/></e>
@@ -225,7 +224,7 @@
 
     <pardef n="e1_irreg__vblex">
       <e><par n="v_pp_e"/></e>
-      <e><par n="1_ei"/></e>
+      <e><par n="1_ae"/></e>
     </pardef>
     <pardef n="e1__vblex">
       <e><par n="e1_irreg__vblex"/></e>
@@ -235,7 +234,7 @@
 
     <pardef n="ai1_irreg__vblex">
       <e><par n="v_pp_e"/></e>
-      <e><par n="1_ei"/></e>
+      <e><par n="1_ae"/></e>
     </pardef>
     <pardef n="ai1__vblex">
       <e><par n="ai1_irreg__vblex"/></e>
