@@ -54,9 +54,18 @@ class VCVerb < Verb
   end
 end
 
+class ComplexVerb < Verb
+  def initialize(verb, root, changed)
+    super(verb)
+    @root, @changed = root, changed
+  end
 
+  attr :root, :changed
+end
+
+# need type for 0__vblex too, see sur
 VCHANGE = ERB.new <<-DATA
-<e lm="<%=verb.verb%>"><p><l><%=verb.changed%></l><r><%=verb.verb%></r></p><par n="0__vblex"/></e>
+<e lm="<%=verb.verb%>"><p><l><%=verb.changed%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>0__vblex"/></e>
 <e lm="<%=verb.verb%>"><p><l><%=verb.root%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>1__vblex"/></e>
 DATA
 VBLEX = ERB.new <<-DATA
@@ -68,13 +77,26 @@ VBLEX = ERB.new <<-DATA
   <par n='<%=verb.type%>__vblex'/>
 </e>
 DATA
-
+VIRREG = ERB.new <<-DATA
+<e lm="<%=verb.verb%>"><p><l><%=verb.changed%></l><r><%=verb.verb%></r></p><par n="v_pri_<%=verb.type%>"/></e>
+<e lm="<%=verb.verb%>"><p><l><%=verb.root%></l><r><%=verb.verb%></r></p><par n="<%=verb.type%>1_irreg__vblex"/></e>
+DATA
 
 def generate
-  irregular = Nokogiri::XML(File.read('irregular.dix'))
+  # add strings here - added to the section
+  verbs =  []
+  # add strings here - added to the pardefs
+  pardefs = []
   document = Nokogiri::XML(File.read('basics.dix'))
 
-  vbchange = Dir['vblex/*-*'].flat_map do |file|
+  irregular_name = 'irregular.dix'
+  if File.exist? irregular_name
+    irregular = Nokogiri::XML(File.read(irregular_name))
+    verbs << irregular.css("#main").children
+    pardefs << irregular.css("pardef")
+  end
+
+  verbs << Dir['vblex/*-*'].flat_map do |file|
     from, to = File.basename(file).split('-')
     File.read(file).each_line.map do |verb|
       verb = VCVerb.new(verb, from, to)
@@ -82,17 +104,24 @@ def generate
     end
   end.join("\n")
 
-  vblex = File.read('vblex/simple').each_line.map do |verb|
+  verbs << File.read('vblex/simple').each_line.map do |verb|
     verb = Verb.new verb
     VBLEX.result(binding)
   end.join("\n")
 
-  vbirreg = irregular.css("#main").children
-  pars = irregular.css("pardef")
+  [['vblex/complex', VCHANGE], ['vblex/irregular', VIRREG]].each do |(file, template)|
+    if File.exist?(file)
+      verbs << File.read(file).each_line.map do |line|
+        verb = ComplexVerb.new(*line.split(";").map(&:strip))
+        template.result(binding)
+      end.join("\n")
+    end
+  end
 
-  [vbirreg, vbchange, vblex].each do |vb| document.at_css("#main").add_child vb end
-
-  document.at_css("pardefs").add_child pars
+  # require 'pry'
+  # binding.pry
+  verbs.each do |vb| vb and document.at_css("#main").add_child vb end
+  pardefs.each do |pardef| pardef and document.at_css("pardefs").add_child pardef end
 
   File.open('generated.dix', 'w') {|file| file.puts document.to_xml(encoding: 'utf-8') }
 end

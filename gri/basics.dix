@@ -170,13 +170,27 @@
       <e><p><l>ind</l><r><s n="ger"/></r></p></e>
     </pardef>
 
-    <!-- vocal changes in this category -->
+    <!-- vocal changes in this category (second root) -->
     <pardef n="0__vblex">
       <e><par n="v_pri"/></e>
       <e><par n="v_prs"/></e>
     </pardef>
 
-    <!-- but not in this one -->
+    <!-- aliases for generation -->
+    <pardef n="a0__vblex">
+      <e><par n="0__vblex"/></e>
+    </pardef>
+    <pardef n="e0__vblex">
+      <e><par n="0__vblex"/></e>
+    </pardef>
+    <pardef n="ai0__vblex">
+      <e><par n="0__vblex"/></e>
+    </pardef>
+    <pardef n="i0__vblex">
+      <e><par n="0__vblex"/></e>
+    </pardef>
+
+    <!-- no vocal changes here, this is the first root -->
     <pardef n="a1__vblex">
       <e><par n="v_ger_a"/></e>
       <e><par n="v_pp_a"/></e>
