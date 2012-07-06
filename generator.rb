@@ -82,13 +82,10 @@ def generate
     end
   end.join("\n")
 
-  vblex = Dir['vblex/simple'].flat_map do |file|
-    type = File.basename file
-    File.read(file).each_line.map do |verb|
+  vblex = File.read('vblex/simple').each_line.map do |verb|
       verb = Verb.new verb
       VBLEX.result(binding)
-    end
-  end.join("\n")
+    end.join("\n")
 
   vbirreg = irregular.css("#main").children
   pars = irregular.css("pardef")
