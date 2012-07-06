@@ -17,6 +17,12 @@ esser   ; fuva     ; pii.p3.sg ; vblex
 esser   ; fuvan    ; pii.p1.pl ; vblex
 esser   ; fuvas    ; pii.p2.pl ; vblex
 esser   ; fuva     ; pii.p3.pl ; vblex
+esser   ; seigi    ; prs.p1.sg ; vblex
+esser   ; seigies  ; prs.p2.sg ; vblex
+esser   ; seigi    ; prs.p3.sg ; vblex
+esser   ; seigien  ; prs.p1.pl ; vblex
+esser   ; seigies  ; prs.p2.pl ; vblex
+esser   ; seigien  ; prs.p3.pl ; vblex
 haver   ; haver    ; inf       ; vblex
 haver   ; hai      ; pri.p1.sg ; vblex
 haver   ; has      ; pri.p2.sg ; vblex
@@ -26,6 +32,14 @@ haver   ; vein     ; pri.p1.pl ; vblex
 haver   ; haveis   ; pri.p2.pl ; vblex
 haver   ; veis     ; pri.p2.pl ; vblex
 haver   ; han      ; pri.p3.pl ; vblex
+haver   ; hagi     ; prs.p1.sg ; vblex
+haver   ; hagies   ; prs.p2.sg ; vblex
+haver   ; hagi     ; prs.p3.sg ; vblex
+haver   ; haveien  ; prs.p1.pl ; vblex
+haver   ; veien    ; prs.p1.pl ; vblex
+haver   ; haveies  ; prs.p2.pl ; vblex
+haver   ; veies    ; prs.p2.pl ; vblex
+haver   ; hagien   ; prs.p3.pl ; vblex
 vegnir  ; vegnir   ; inf       ; vblex
 vegnir  ; vegnel   ; pri.p1.sg ; vblex
 vegnir  ; vegns    ; pri.p2.sg ; vblex

@@ -94,9 +94,10 @@ def generate
   pardefs = []
   document = Nokogiri::XML(File.read('basics.dix'))
 
-  irregular_name = 'irregular.dix'
-  if File.exist? irregular_name
-    verbs << File.read(irregular_name)
+  ['irregular.dix', 'additions.dix'].each do |name|
+    if File.exist? name
+      verbs << File.read(name)
+    end
   end
 
   verbs << Dir['vblex/*-*'].flat_map do |file|
