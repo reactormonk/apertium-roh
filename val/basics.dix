@@ -1,0 +1,279 @@
+<dictionary>
+  <alphabet>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzî</alphabet>
+  <sdefs>
+    <sdef n="vblex"/>
+    <sdef n="sg"/>
+    <sdef n="pl"/>
+    <sdef n="p1"/>
+    <sdef n="p2"/>
+    <sdef n="p3"/>
+    <sdef n="prs"/>
+    <sdef n="cni"/>
+    <sdef n="pri"/>
+    <sdef n="pii"/>
+    <sdef n="inf"/>
+    <sdef n="ger"/>
+    <sdef n="imp"/>
+    <sdef n="pp"/>
+    <sdef n="m"/>
+    <sdef n="f"/>
+  </sdefs>
+  <pardefs>
+    <!-- changes in here -->
+    <pardef n="v0_pri">
+      <e><p>
+        <l></l>
+        <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ast</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>a</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>an</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <!-- none in here -->
+    <pardef n="v1_pri_ae">
+      <e><p>
+        <l>ain</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>ais</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>aivat</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <pardef n="v1_pri_i">
+      <e><p>
+        <l>in</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>is</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>ivat</l>
+        <r><s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <pardef n="v0_prs">
+      <e><p>
+        <l>a</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ast</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>a</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>an</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>at</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p1"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>an</l>
+        <r><s n="vblex"/><s n="prs"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <!-- + e/i depending on class -->
+    <pardef n="v_cni">
+      <e><p>
+        <l>ss</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p1"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>sses</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p2"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ss</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p3"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ssen</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p1"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>sses</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>ssen</l>
+        <r><s n="vblex"/><s n="cni"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <!-- + a/ depending on class -->
+    <pardef n="v_pii">
+      <e><p>
+        <l>iva</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p1"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ivast</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p2"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>iva</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p3"/><s n="sg"/></r>
+      </p></e>
+      <e><p>
+        <l>ivan</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p1"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>ivat</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p2"/><s n="pl"/></r>
+      </p></e>
+      <e><p>
+        <l>ivan</l>
+        <r><s n="vblex"/><s n="pii"/><s n="p3"/><s n="pl"/></r>
+      </p></e>
+    </pardef>
+
+    <!-- TODO introduce irregular pps -->
+    <pardef n="v_pp_a">
+      <e><p><l>à</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="m"/></r></p></e>
+      <e><p><l>ada</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="f"/></r></p></e>
+      <e><p><l>ats</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="m"/></r></p></e>
+      <e><p><l>adas</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="f"/></r></p></e>
+    </pardef>
+
+    <pardef n="v_pp_e">
+      <e><p><l>ü</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="m"/></r></p></e>
+      <e><p><l>üda</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="f"/></r></p></e>
+      <e><p><l>üts</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="m"/></r></p></e>
+      <e><p><l>üdas</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="f"/></r></p></e>
+    </pardef>
+
+    <pardef n="v_pp_i">
+      <e><p><l>i</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="m"/></r></p></e>
+      <e><p><l>ida</l><r><s n="vblex"/><s n="pp"/><s n="sg"/><s n="f"/></r></p></e>
+      <e><p><l>its</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="m"/></r></p></e>
+      <e><p><l>idas</l><r><s n="vblex"/><s n="pp"/><s n="pl"/><s n="f"/></r></p></e>
+    </pardef>
+
+    <pardef n="v_ger_ae">
+      <e><p><l>and</l><r><s n="ger"/></r></p></e>
+    </pardef>
+
+    <pardef n="v_ger_i">
+      <e><p><l>ind</l><r><s n="ger"/></r></p></e>
+    </pardef>
+
+    <!-- vocal changes in this category (second root) -->
+    <pardef n="a0__vblex">
+      <e><par n="v0_pri"/></e>
+      <e><par n="v0_prs"/></e>
+    </pardef>
+
+    <pardef n="e0__vblex">
+      <e><par n="v0_pri"/></e>
+      <e><par n="v0_prs"/></e>
+    </pardef>
+
+    <pardef n="ai0__vblex">
+      <e><par n="v0_pri"/></e>
+      <e><par n="v0_prs"/></e>
+    </pardef>
+
+    <pardef n="i0__vblex">
+      <e><par n="v0_pri"/></e>
+      <e><par n="v0_prs"/></e>
+    </pardef>
+
+    <!-- no vocal changes here, this is the first root -->
+    <pardef n="1_ae">
+      <e><par n="v1_prs"/></e>
+      <e><par n="v_ger_ae"/></e>
+      <e><p><l>e</l><r/></p><par n="v_cni"/></e>
+      <e><p><l>a</l><r/></p><par n="v_pii"/></e>
+    </pardef>
+
+    <!-- The _irreg_ categories are for irregular verbs -->
+    <pardef n="a1_irreg__vblex">
+      <e><par n="v_pp_a"/></e>
+      <e><par n="1_ae"/></e>
+    </pardef>
+    <pardef n="a1__vblex">
+      <e><par n="a1_irreg__vblex"/></e>
+      <e><par n="v1_pri_ae"/></e>
+      <e><p><l>ar</l><r><s n="vblex"/><s n="inf"/></r></p></e>
+    </pardef>
+
+    <pardef n="e1_irreg__vblex">
+      <e><par n="v_pp_e"/></e>
+      <e><par n="1_ei"/></e>
+    </pardef>
+    <pardef n="e1__vblex">
+      <e><par n="e1_irreg__vblex"/></e>
+      <e><par n="v1_pri_ae"/></e>
+      <e><p><l>er</l><r><s n="vblex"/><s n="inf"/></r></p></e>
+    </pardef>
+
+    <pardef n="ai1_irreg__vblex">
+      <e><par n="v_pp_e"/></e>
+      <e><par n="1_ei"/></e>
+    </pardef>
+    <pardef n="ai1__vblex">
+      <e><par n="ai1_irreg__vblex"/></e>
+      <e><par n="v1_pri_ae"/></e>
+      <e><p><l>air</l><r><s n="vblex"/><s n="inf"/></r></p></e>
+    </pardef>
+
+    <pardef n="i1_irreg__vblex">
+      <e><par n="v_ger_i"/></e>
+      <e><par n="v_pp_i"/></e>
+      <e><p><l>i</l><r/></p><par n="v_cni"/></e>
+      <e><p><l></l><r/></p><par n="v_pii"/></e>
+    </pardef>
+
+    <pardef n="i1__vblex">
+      <e><par n="i1_irreg__vblex"/></e>
+      <e><par n="v1_pri_i"/></e>
+      <e><p><l>ir</l><r><s n="vblex"/><s n="inf"/></r></p></e>
+    </pardef>
+
+    <!-- joined together for easier use -->
+    <pardef n="a__vblex">
+      <e><par n="a0__vblex"/></e>
+      <e><par n="a1__vblex"/></e>
+    </pardef>
+    <pardef n="i__vblex">
+      <e><par n="i0__vblex"/></e>
+      <e><par n="i1__vblex"/></e>
+    </pardef>
+    <pardef n="ai__vblex">
+      <e><par n="ai0__vblex"/></e>
+      <e><par n="ai1__vblex"/></e>
+    </pardef>
+    <pardef n="e__vblex">
+      <e><par n="e0__vblex"/></e>
+      <e><par n="e1__vblex"/></e>
+    </pardef>
+  </pardefs>
+  <section id="main" type="standard">
+  </section>
+</dictionary>
