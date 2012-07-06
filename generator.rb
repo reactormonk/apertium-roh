@@ -96,9 +96,7 @@ def generate
 
   irregular_name = 'irregular.dix'
   if File.exist? irregular_name
-    irregular = Nokogiri::XML(File.read(irregular_name))
-    verbs << irregular.css("#main").children
-    pardefs << irregular.css("pardef")
+    verbs << File.read(irregular_name)
   end
 
   verbs << Dir['vblex/*-*'].flat_map do |file|
