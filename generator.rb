@@ -62,11 +62,11 @@ DATA
     from, to = file.split('-')
     File.read(file).each_line do |verb|
       verb = VCVerb.new(verb, from, to)
-      document.at_css("#main").add_child VCHANGE.result(binding)
+      document.at_css("#main").add_child VCHANGE.result(verb)
     end
   end
 
-  Dir['vblex/?'].flat_map do |file|
+  Dir['vblex/simple'].flat_map do |file|
     type = File.basename file
     File.read(file).each_line do |verb|
       verb = Verb.new verb
