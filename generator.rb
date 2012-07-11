@@ -101,6 +101,8 @@ def generate
     end
   end
 
+  # TODO: 106/107
+
   verbs << Dir['vblex/*-*'].flat_map do |file|
     from, to = File.basename(file).split('-')
     File.read(file).each_line.map do |verb|
