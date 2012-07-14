@@ -93,7 +93,7 @@ def generate
   verbs =  []
   # add strings here - added to the pardefs
   pardefs = []
-  document = Nokogiri::XML(File.read('basics.dix'))
+  document = Nokogiri::XML(File.read('basics.dix', encoding: 'utf-8'))
 
   ['irregular.dix', 'additions.dix'].each do |name|
     if File.exist? name
